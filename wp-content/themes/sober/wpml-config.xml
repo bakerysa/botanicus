@@ -1,0 +1,32 @@
+<wpml-config>
+	<custom-fields>
+		<custom-field action="translate">image</custom-field>
+		<custom-field action="translate">images</custom-field>
+		<custom-field action="translate">video</custom-field>
+		<custom-field action="translate">audio</custom-field>
+		<custom-field action="copy">site_header_bg</custom-field>
+		<custom-field action="copy">site_header_text_color</custom-field>
+		<custom-field action="copy">hide_page_header</custom-field>
+		<custom-field action="copy">page_header_bg</custom-field>
+		<custom-field action="copy">page_header_text_color</custom-field>
+		<custom-field action="copy">hide_breadcrumb</custom-field>
+		<custom-field action="copy">hide_page_title</custom-field>
+		<custom-field action="copy">custom_layout</custom-field>
+		<custom-field action="copy">layout</custom-field>
+	</custom-fields>
+
+	<admin-texts>
+		<key name="theme_mods_sober">
+			<key name="popup_content" />
+			<key name="project_nav_text_next" />
+			<key name="project_nav_text_prev" />
+			<key name="products_toggle_tags" />
+			<key name="topbar_content" />
+			<key name="product_extra_content" />
+			<key name="footer_content" />
+			<key name="footer_copyright" />
+			<key name="footer_social_extra" />
+			<key name="footer_bottom_content" />
+		</key>
+	</admin-texts>
+</wpml-config>

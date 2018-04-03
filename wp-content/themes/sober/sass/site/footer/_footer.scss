@@ -1,0 +1,141 @@
+.site-footer {
+	.footer-widgets,
+	.footer-content,
+	.footer-info {
+		&:before {
+			content: "";
+			display: block;
+			margin: 0 40px;
+			border-top: 1px solid $color__border;
+		}
+	}
+
+	.footer-info.footer-wrapped:before {
+		width: 1140px;
+		margin: 0 auto;
+	}
+}
+
+.footer-info {
+	@include font-size(1.2);
+	font-weight: 500;
+
+	.container,
+	.sober-container {
+		padding-top: 33px;
+		padding-bottom: 32px;
+	}
+
+	.copyright {
+		color: $color__primary;
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	.footer-social {
+		text-align: right;
+
+		.socials-menu,
+		.socials-extra {
+			display: inline-block;
+		}
+	}
+
+	.socials-extra {
+		padding-left: 30px;
+	}
+}
+
+.footer-content {
+	text-align: center;
+
+	h3 {
+		color: $color__primary;
+		@include font-size(2.4);
+		font-weight: 400;
+	}
+
+	.sober-container {
+		padding-top: 17px;
+		padding-bottom: 37px;
+		position: relative;
+	}
+
+	.mc4wp-form {
+		margin: 40px auto 0 auto;
+		width: 900px;
+		max-width: 100%;
+
+		input[type=text],
+		input[type=email],
+		input[type=submit] {
+			height: 50px;
+			border: 0;
+			border-bottom: 2px solid #e4e6eb;
+
+			&:focus,
+			&:hover {
+				border-color: $color__primary;
+			}
+		}
+
+		input[type=text],
+		input[type=email] {
+			color: $color__primary;
+			font-weight: 400;
+			width: 80%;
+			padding: 0 20px;
+			margin-right: 10px;
+		}
+
+		input[type=submit] {
+			@include font-size(1.6);
+			font-weight: 500;
+			color: $color__primary;
+			position: relative;
+			bottom: -1px;
+			padding: 0 10px;
+			background-color: transparent;
+			box-shadow: none;
+			border-radius: 0;
+		}
+	}
+}
+
+.footer-widgets {
+	.container {
+		padding-top: 60px;
+		padding-bottom: 20px;
+	}
+}
+
+.footer-instagram {
+	ul.instagram-feed {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+
+		li {
+			float: left;
+			width: 12.5%;
+			transition: 0.5s;
+		}
+
+		li:hover {
+			opacity: 0.9;
+		}
+	}
+}
+
+.footer-bottom {
+	@include font-size(1.2);
+	padding: 0 0 30px 0;
+}
+
+#gotop {
+	position: absolute;
+	right: 20px;
+	bottom: 200px;
+	z-index: 99999;
+}

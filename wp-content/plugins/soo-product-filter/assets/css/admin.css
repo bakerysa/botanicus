@@ -1,0 +1,58 @@
+.soopf-filters {
+	position: relative;
+}
+
+.soopf-filters .no-filter {
+	text-align: center;
+}
+
+.soopf-add-new {
+	font-weight: 700;
+}
+
+.soopf-filter-fields * {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.soopf-filter-fields {
+	overflow: hidden;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: 20px;
+}
+
+.soopf-filter-fields .name,
+.soopf-filter-fields .source,
+.soopf-filter-fields .display,
+.soopf-filter-fields .actions {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.soopf-filter-fields .name,
+.soopf-filter-fields .source,
+.soopf-filter-fields .display {
+	width: 32%;
+}
+
+.soopf-filter-fields .actions {
+	width: 4%;
+	padding-top: 26px;
+	text-align: right;
+}
+
+.soopf-filter-fields .remove-filter {
+	color: #b4b9be;
+}
+
+.soopf-filter-fields .remove-filter:hover {
+	color: #c00;
+}
+
+.soopf-filter-fields input,
+.soopf-filter-fields select {
+	margin: 5px 0;
+}

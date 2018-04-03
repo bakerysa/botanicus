@@ -1,0 +1,163 @@
+.header-icon {
+	text-align: right;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 25px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&.menu-item-cart,
+		&.menu-item-wishlist {
+			position: relative;
+			padding-right: 25px;
+
+			span.count {
+				@include counter();
+			}
+		}
+
+		&.menu-item-cart svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	.shopping-cart-icon {
+		display: inline-block;
+		position: relative;
+
+		img {
+			transition: opacity 0.5s;
+			opacity: 1;
+		}
+
+		.icon-light {
+			position: absolute;
+			opacity: 0;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&.header-icon-left {
+		text-align: left;
+	}
+
+	.header-v6 & {
+		float: right;
+	}
+
+	.header-text-light & {
+		svg {
+			fill: $color__light;
+			stroke: $color__light;
+			transition: all 0.5s;
+		}
+
+		li.menu-item-cart,
+		li.menu-item-wishlist ,
+		.menu-item-mobile-cart,
+		.menu-item-mobile-wishlist {
+			span.count {
+				color:$color__primary;
+				background-color: $color__light;
+			}
+		}
+
+		.shopping-cart-icon {
+			.icon-dark {
+				opacity: 0;
+			}
+
+			.icon-light {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.toggle-nav {
+	color: $color__dark;
+	display: inline-block;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	margin: 0 40px 0 0;
+	vertical-align: top;
+
+	.icon-nav {
+		position: absolute;
+		border-bottom: 2px solid;
+		top: 50%;
+		left: 0;
+		width: 18px;
+		height: 2px;
+		margin-top: -1px;
+		transition: 0.5s;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -6px;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			border-bottom: 2px solid;
+			transition: transform 0.5s;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 6px;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			border-bottom: 2px solid;
+			transition: transform 0.5s;
+		}
+	}
+
+	&.active {
+		.icon-nav {
+			transform: rotate(45deg);
+
+			&:before {
+				opacity: 0;
+			}
+			&:after {
+				transform: rotate(90deg);
+				top: 0;
+			}
+		}
+	}
+}
+
+.menu-item-mobile-cart,
+.menu-item-mobile-wishlist {
+	position: relative;
+	display: inline-block;
+
+	svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.count {
+		@include counter();
+		right: auto;
+		left: 0;
+		transform: translateX(-110%);
+	}
+}

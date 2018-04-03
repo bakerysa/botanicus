@@ -1,0 +1,18 @@
+.breadcrumb {
+	@include font-size(1.2);
+	color: $color__primary;
+	font-weight: 500;
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
+	background-color: transparent;
+
+	a,
+	.fa {
+		color: $color__secondary;
+	}
+
+	.fa {
+		margin: 0 8px;
+	}
+}

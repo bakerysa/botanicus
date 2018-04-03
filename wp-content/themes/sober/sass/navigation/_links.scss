@@ -1,0 +1,18 @@
+a {
+	transition: 0.5s;
+	color: $color__primary;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:visited {
+
+	}
+	
+	&:hover,
+	&:active,
+	&:focus {
+		color: darken(desaturate($color__primary, 3.7001), 2.7451);
+		outline: 0;
+		text-decoration: none;
+	}
+}

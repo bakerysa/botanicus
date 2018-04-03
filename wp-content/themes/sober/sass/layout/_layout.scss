@@ -1,0 +1,51 @@
+.sober-container {
+	padding-left: 40px;
+	padding-right: 40px;
+
+	.widget-area {
+		width: 350px;
+	}
+}
+
+.sidebar-single-left {
+	.content-area {
+		float: right;
+	}
+
+	.widget-area {
+		float: left;
+		padding-right: 45px;
+	}
+
+	.sober-container {
+		.content-area {
+			width: calc(100% - 350px);
+		}
+
+		.widget-area {
+			float: left;
+		}
+	}
+}
+
+.sidebar-single-right {
+	.widget-area {
+		padding-left: 45px;
+	}
+
+	.sober-container {
+		.content-area {
+			width: calc(100% - 350px);
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Padding classes
+--------------------------------------------------------------*/
+@import "padding";
+
+/*--------------------------------------------------------------
+## Bootstrap 5 Columns
+--------------------------------------------------------------*/
+@import "bootstrap-5-columns";

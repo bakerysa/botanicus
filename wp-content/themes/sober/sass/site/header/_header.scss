@@ -1,0 +1,285 @@
+/*--------------------------------------------------------------
+## Topbar
+--------------------------------------------------------------*/
+@import "topbar";
+/*--------------------------------------------------------------
+## Logo
+--------------------------------------------------------------*/
+@import "logo";
+/*--------------------------------------------------------------
+## Header Icon
+--------------------------------------------------------------*/
+@import "header-icon";
+
+.site-header {
+	padding: 35px 0;
+
+	.header-transparent & {
+		transition: 0.5s;
+		position: absolute;
+		width: 100%;
+		z-index: 999;
+		border-bottom: 0;
+		background-color: transparent;
+	}
+
+	.header-transparent.header-hoverable &:hover {
+		box-shadow: 0 1px 0 0 rgba(241, 242, 244, 0);
+		background-color: #fff;
+	}
+
+	.header-v3 & {
+		padding-top: 25px;
+		padding-bottom: 21px;
+
+		.list-dropdown {
+			@include font-size(1);
+			font-weight: 600;
+			text-transform: uppercase;
+			padding-bottom: 2px;
+			border-bottom: 2px solid #edece8;
+
+			a {
+				color: $color__primary;
+			}
+
+			ul {
+				transform: translateY(24px);
+				box-shadow: 0 4px 10px 0 rgba(3, 3, 3, 0.1);
+				background-color: #fff;
+
+				&:before {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 24px;
+					position: absolute;
+					top: -24px;
+				}
+
+				a {
+					color: $color__secondary;
+
+					&:hover {
+						color: $color__primary;
+					}
+				}
+			}
+		}
+
+		.currency {
+			margin-right: 35px;
+
+			a.woocs_flag_view_item {
+				width: auto;
+				height: auto;
+				padding: 0;
+				margin: 0;
+			}
+
+			a.woocs_flag_view_item_current {
+				opacity: 1;
+			}
+		}
+	}
+
+	.header-v4 & {
+		.row,
+		.header-content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.site-navigation {
+			flex: 1;
+		}
+	}
+
+	.header-v5 & {
+		padding-bottom: 21px;
+	}
+
+	.header-text-light & {
+		.currency,
+		.language {
+			.current {
+				color: $color__light;
+			}
+
+			a {
+				color: $color__light;
+			}
+		}
+
+		.toggle-nav {
+			color: $color__light;
+		}
+
+		svg {
+			fill: $color__light;
+			stroke: $color__light;
+			transition: all 0.5s;
+		}
+
+		li.menu-item-cart,
+		li.menu-item-wishlist {
+			span.count {
+				color: $color__primary;
+				background-color: $color__light;
+			}
+		}
+	}
+
+	.header-transparent.header-hoverable.header-text-light &:hover {
+		.logo,
+		.currency a,
+		.language a,
+		.toggle-nav {
+			color: $color__primary;
+		}
+
+		svg {
+			fill: $color__primary;
+			stroke: $color__primary;
+		}
+
+		li.menu-item-cart,
+		li.menu-item-wishlist,
+		.menu-item-mobile-cart {
+			span.count {
+				color: $color__light;
+				background-color: $color__primary;
+			}
+		}
+
+		.shopping-cart-icon {
+			.icon-dark {
+				opacity: 1;
+			}
+
+			.icon-light {
+				opacity: 0;
+			}
+		}
+	}
+
+	.no-page-header & {
+		border-bottom: 1px solid $color__border;
+	}
+
+	.no-page-header.page-template-homepage &,
+	.no-page-header.home &,
+	.no-page-header.header-transparent & {
+		border-bottom: 0;
+	}
+
+	.single-product.product-style-4 & {
+		border-bottom: 0;
+	}
+}
+
+.header-sticky {
+	&.header-white .site-header {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		background-color: $color__light;
+	}
+
+	&.header-white.topbar-enabled .site-header {
+		top: 40px;
+	}
+
+	.site-header.sticky,
+	.site-header.headroom--not-top {
+		.logo,
+		.currency a,
+		.language a,
+		.toggle-nav {
+			color: $color__primary;
+		}
+
+		svg {
+			fill: $color__primary;
+			stroke: $color__primary;
+		}
+
+		li.menu-item-cart,
+		li.menu-item-wishlist,
+		.menu-item-mobile-cart,
+		.menu-item-mobile-wishlist {
+			span.count {
+				color: $color__light;
+				background-color: $color__primary;
+			}
+		}
+
+		.nav-menu > li > a {
+			color: $color__primary;
+
+			&:after {
+				background-color: $color__primary;
+			}
+		}
+
+		.logo {
+			.logo-dark {
+				opacity: 1;
+			}
+
+			.logo-light {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.header-sticky-normal {
+	.site-header.sticky {
+		position: fixed !important;
+		top: 0 !important;
+		z-index: 1500;
+		width: 100%;
+		background: $color__light;
+	}
+}
+
+.header-sticky-smart {
+	.site-header.headroom {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1500;
+	}
+
+	&.topbar-enabled .site-header.headroom {
+		position: absolute;
+		top: 40px;
+	}
+
+	.site-header.headroom--not-top {
+		position: fixed !important;
+		top: 0 !important;
+		width: 100%;
+		z-index: 1500;
+		background-color: $color__light;
+	}
+}
+
+.header-v6 .site-nav {
+	float: left;
+}
+
+.headroom {
+	will-change: transform;
+	transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+	transform: translateY(0%);
+}
+
+.headroom--unpinned {
+	transform: translateY(-100%);
+}

@@ -1,0 +1,201 @@
+.smm-settings {
+	position: relative;
+	display: none;
+}
+
+.smm-modal-backdrop {
+	z-index: 159899;
+}
+
+.smm-modal {
+	z-index: 159999;
+}
+
+.smm-toolbar .spinner {
+	margin-top: 22px;
+}
+
+.smm-menu a:focus,
+.smm-menu a:active {
+	outline: none;
+}
+
+.smm-menu a.active {
+	box-shadow: none;
+}
+
+.smm-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.smm-content > .smm-panel {
+	padding: 20px;
+	display: none;
+}
+
+.smm-content > .smm-panel.active {
+	display: block;
+}
+
+.smm-content > .spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -10px 0 0 -10px;
+	opacity: 1;
+	visibility: visible;
+}
+
+/**
+ * Mega Menu Content Fields
+ */
+.mega-settings {
+	overflow: hidden;
+}
+
+.mega-settings .setting-field {
+	float: left;
+	padding-right: 30px;
+}
+
+.mega-settings .setting-field select {
+	width: 100%;
+}
+
+.smm-mega-content {
+	position: relative;
+	padding: 10px;
+	overflow: hidden;
+	background-color: #fcfcfc;
+}
+
+.smm-submenu-column {
+	box-sizing: border-box;
+	-webkit-transition: width 0.7s;
+	transition: width 0.7s;
+	float: left;
+	position: relative;
+	padding: 10px;
+}
+
+.smm-submenu-column ul {
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #eee;
+	background: #fff;
+}
+
+.smm-submenu-column li.menu-item-depth-0 {
+	text-transform: uppercase;
+	position: relative;
+	padding: 0 60px 0 0;
+	margin-bottom: 0;
+	min-height: 18px;
+}
+
+.smm-submenu-column .smm-column-handle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	cursor: pointer;
+}
+
+.smm-submenu-column .smm-resizable-e {
+	right: 40px;
+}
+
+.smm-submenu-column .smm-resizable-w {
+	text-align: right;
+}
+
+.smm-submenu-column .smm-column-width-label {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	width: 20px;
+	text-align: center;
+}
+
+/**
+ * Background Fields
+ */
+.smm-panel-background {
+	box-sizing: border-box;
+	position: relative;
+	height: 100%;
+}
+
+.smm-panel-background .background-image {
+	width: 50%;
+	position: relative;
+	height: 100%;
+	float: left;
+	margin: 0;
+	padding-right: 20px;
+}
+
+.smm-panel-background .background-image-preview {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.smm-panel-background .background-image-preview img {
+	max-width: 100%;
+}
+
+/**
+ * Icon fields
+ */
+.smm-icon-selector {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.smm-icon-selector .smm-icon-search {
+	height: 50px;
+	line-height: 50px;
+	margin: 0;
+	padding: 10px;
+}
+
+.smm-icon-selector .icons i {
+	cursor: pointer;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 4px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 50px;
+	border: 1px solid #eee;
+}
+
+.smm-icon-selector .icons .active {
+	background-color: #eee;
+}
+
+#smm-selected-icon {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	text-align: center;
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+#smm-selected-icon:hover {
+	border-color: #fe2f2f;
+}
+
+#smm-selected-icon i {
+	font-size: 20px;
+	line-height: 48px;
+	cursor: pointer;
+}

@@ -1,0 +1,111 @@
+body.error404 {
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.site-header {
+		border-bottom: 0;
+	}
+
+	.site-content {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.footer-info:before {
+		display: none;
+	}
+}
+
+.error-404 {
+	text-align: center;
+	padding: 0;
+	margin: 200px auto;
+	background-color: rgba( 255, 255, 255, 0.9 );
+	box-shadow: 0 4px 10px 0 rgba(3, 3, 3, 0.1);
+
+	.page-header {
+		padding: 70px 0 0 0;
+		background: none;
+	}
+
+	.page-title {
+		@include font-size(16);
+		line-height: 1;
+		font-weight: 300;
+	}
+
+	.page-content {
+		@include font-size(1.8);
+		color: $color__primary;
+		font-weight: 500;
+		margin: 0;
+		padding-bottom: 120px;
+	}
+
+	.page-search {
+		padding: 50px 70px;
+		background-color: $color__border;
+		text-align: left;
+
+		h4 {
+			@include font-size(3.2);
+			font-weight: 300;
+			color: $color__primary;
+			float: left;
+			margin-top: 2px;
+			margin-bottom: 0;
+			width: 25%;
+		}
+
+		.search-form {
+			width: 75%;
+			float: right;
+			border-bottom: 2px solid #bfbfc8;
+			padding-bottom: 5px;
+			margin-top: -5px;
+			position: relative;
+
+			label {
+				margin-bottom: 0;
+				width: 100%;
+			}
+			.search-field {
+				@include font-size(1.4);
+				font-weight: 400;
+				color: $color__primary;
+				border: none;
+				border-radius: 0;
+				background-color: transparent;
+				outline: 0;
+				width: 100%;
+				padding-right: 35px;
+			}
+
+			::-webkit-input-placeholder {
+				@include font-size(1.4);
+				font-weight: 400;
+				color: #bfbfc8;
+			}
+
+			.search-submit {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -18px;
+				z-index: 999;
+				width: 35px;
+				height: 35px;
+				opacity: 0;
+			}
+			svg {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -10px;
+				stroke: $color__secondary;
+				fill: $color__secondary;
+			}
+		}
+	}
+}

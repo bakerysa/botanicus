@@ -1,0 +1,128 @@
+@import "buttons";
+
+@import "fields";
+
+form {
+	::-webkit-input-placeholder {
+	   color: $color__secondary;
+	}
+}
+
+.search-content {
+	text-align: center;
+
+	form {
+		width: 60%;
+		margin: 0 auto;
+		position: relative;
+		border-bottom: 2px solid $color__border;
+		padding: 15px 10px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	.search-field {
+		width: 100%;
+		border: none;
+		border-radius: 0;
+		padding-left: 60px;
+		outline: 0;
+	}
+
+	.search-submit {
+		position: absolute;
+		left: 0;
+		top: 0;
+	    height: 100%;
+	    background-color: #fff;
+	    border: none;
+	    box-shadow: none;
+	    z-index: 9999;
+	    opacity: 0;
+	    outline: 0;
+	}
+	
+	span.search-img {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    padding: 20px 0px;
+	    width: 45px;
+	    text-align: left;
+	}
+}
+
+.search-menu {
+	border-bottom: 1px solid $color__border;
+	padding: 35px 0;
+
+	form {
+		width: 100%;
+		border: none;
+		padding: 0;
+		
+		.search-field {
+			padding-left: 0;
+		}
+
+		.search-submit {
+			position: absolute;
+			right: 0;
+			top: 0;
+			left: initial;
+			opacity: 0;
+		}
+	}
+	.search-img {
+		position: absolute;
+	    right: 40px;
+	    z-index: 1;
+	    width: 50px;
+	    text-align: right;
+
+	    svg {
+	    	margin-bottom: -5px;
+	    }
+	}
+}
+
+.wpcf7-form {
+	textarea {
+		height: 100px;
+
+		&:focus {
+			border-color: $color__primary;
+		}
+	}
+
+	p {
+		margin-bottom: 30px;
+	}
+
+	.wpcf7-form-control {
+		width: 100%;
+		border-color: #bfbfc8;
+		background-color: transparent;
+	}
+	
+	.wpcf7-submit {
+		@include font-size(1.4);
+		@extend .btn;
+		line-height: 80px;
+		text-transform: uppercase;
+		background-color: $color__primary;
+	}
+
+	.wpcf7-not-valid-tip {
+		@include font-size(1.2);
+	}
+
+	.wpcf7-response-output {
+		margin: 0;
+	}
+}

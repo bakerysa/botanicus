@@ -1,0 +1,64 @@
+.tabs-nav {
+	@include font-size(2);
+	color: $color__primary;
+	font-weight: 500;
+	margin: 0 0 70px;
+	padding-bottom: 10px;
+
+	span {
+		color: $color__secondary;
+		margin: 0 30px;
+		transition: all 0.5s;
+
+		&:hover,
+		&.active {
+			color: $color__primary;
+
+			.count {
+				color: #fff;
+				background-color: $color__primary;
+			}
+		}
+	}
+
+	.count {
+		@include font-size(1);
+		font-weight: 600;
+		color: $color__secondary;
+		text-align: center;
+		line-height: 20px;
+		margin: -4px 0 0 15px;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		vertical-align: middle;
+		border-radius: 50%;
+		transition: all 0.5s;
+		background-color: #e4e6eb;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+.tab-panels {
+	position: relative;
+}
+
+.tab-panel {
+	transition: 0.5s;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	opacity: 0;
+	transform: translateX(100px);
+
+	&.active {
+		transform: translateX(0);
+		z-index: 1;
+		opacity: 1;
+		position: relative;
+	}
+}

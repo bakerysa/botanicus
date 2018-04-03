@@ -1,0 +1,136 @@
+.soo-product-filter-widget {
+	.product-filter {
+		margin-bottom: 30px;
+	}
+
+	input[type=checkbox],
+	input[type=radio] {
+		display: none;
+	}
+
+	label {
+		font-weight: 400;
+		cursor: pointer;
+	}
+
+	.filter-list {
+		li {
+			cursor: pointer;
+		}
+
+		.selected {
+			text-decoration: underline;
+		}
+	}
+
+	.list label {
+		display: block;
+	}
+
+	.h-list li {
+		display: inline-block;
+		margin: 6px;
+
+		.count {
+			display: none;
+		}
+	}
+
+	.count {
+		float: right;
+	}
+
+	.swatch {
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		-moz-transition: 0.5s;
+		-webkit-transition: 0.5s;
+		transition: 0.5s;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		opacity: 0.5;
+		cursor: pointer;
+		margin: 6px;
+		text-align: center;
+		overflow: hidden;
+
+		&.selected {
+			font-weight: 700;
+			opacity: 1;
+		}
+	}
+
+	.swatch-color {
+		text-indent: -99999px;
+		position: relative;
+
+		&.selected {
+			box-shadow: 0 0 10px;
+
+			&:before {
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				transform: rotate(45deg);
+				content: "";
+				width: 4px;
+				height: 9px;
+				display: block;
+				border: solid #fff;
+				border-width: 0 1px 1px 0;
+				position: absolute;
+				top: 10px;
+				left: 13px;
+			}
+		}
+	}
+
+	.swatch-label {
+		color: #000;
+		opacity: 0.3;
+	}
+
+	.list input:checked + span {
+		font-weight: 400;
+		text-decoration: underline;
+	}
+
+	.filter-slider {
+		height: 4px;
+		margin: 0 7px 20px 7px;
+		position: relative;
+		background-color: #ccc;
+
+		.ui-slider-range {
+			width: 100%;
+			position: absolute;
+			height: 100%;
+			background-color: #666;
+		}
+
+		.ui-slider-handle {
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+			width: 0;
+			height: 0;
+			border: 7px solid #333;
+			position: absolute;
+			top: -5px;
+			margin-left: -7px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	.ajax-filter .filter-button {
+		display: none;
+	}
+}
+
+.no-js .soo-product-filter-widget .ajax-filter .filter-button {
+	display: inline-block;
+}

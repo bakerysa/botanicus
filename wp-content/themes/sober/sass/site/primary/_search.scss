@@ -1,0 +1,28 @@
+.search {
+	.site-main {
+		article {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+			border-bottom: 1px solid $color__border;
+		}
+
+		.product {
+			.entry-title {
+				margin-bottom: 5px;
+			}
+
+			.price-wrapper {
+				.button {
+					display: none;
+				}
+			}
+
+			.entry-summary {
+				margin-top: 10px;
+			}
+		}
+	}
+}

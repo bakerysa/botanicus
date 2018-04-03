@@ -1,0 +1,70 @@
+ul,
+ol {
+	margin: 0 0 1.5em 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+.list-dropdown {
+	position: relative;
+	display: inline-block;
+
+	.current {
+		color: $color__primary;
+		cursor: pointer;
+	}
+
+	.caret {
+		margin-left: 10px;
+	}
+
+	ul {
+		transition: opacity 0.5s;
+		list-style-type: none;
+		margin: 0;
+		padding: 5px 0;
+		min-width: 80px;
+		white-space: nowrap;
+		position: absolute;
+		top: 100%;
+		left: -20px;
+		background: #fff;
+		opacity: 0;
+		z-index: -1;
+
+		li {
+			padding: 5px 20px;
+
+			a {
+				display: block;
+			}
+		}
+	}
+
+	&:hover {
+		ul {
+			z-index: 1600;
+			opacity: 1;
+		}
+	}
+}

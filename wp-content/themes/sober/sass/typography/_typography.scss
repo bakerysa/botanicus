@@ -1,0 +1,16 @@
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	@include font-size(1.4);
+	font-family: $font__main;
+	line-height: $font__line-height-body;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+@import "headings";
+
+@import "copy";

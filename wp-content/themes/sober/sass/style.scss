@@ -1,0 +1,116 @@
+/*
+Theme Name: Sober
+Theme URI: http://uix.store/sober/
+Author: UIX Themes
+Author URI: http://uix.store
+Description: Sober is a fully responsive Premium WordPress Theme with a pixel perfect design and extensive functionality
+Version: 2.0.12
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sober
+Tags: one-column, two-columns, right-sidebar, custom-colors, custom-menu, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+@font-face {
+	font-family: 'Sofia Pro';
+	src: url('fonts/SofiaProLight-webfont.eot');
+	src: url('fonts/SofiaProLight-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/SofiaProLight-webfont.woff2') format('woff2'),
+	url('fonts/SofiaProLight-webfont.woff') format('woff'),
+	url('fonts/SofiaProLight-webfont.ttf') format('truetype'),
+	url('fonts/SofiaProLight-webfont.svg#sofia_prolight') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "layout/layout";
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Woocommerce
+--------------------------------------------------------------*/
+@import "woocommerce/woocommerce";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+@import "media-queries/media-queries";

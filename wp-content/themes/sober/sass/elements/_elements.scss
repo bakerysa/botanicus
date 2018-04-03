@@ -1,0 +1,351 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+:focus {
+	outline: none;
+}
+
+body {
+	position: relative;
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+svg {
+	transition: 0.5s;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	stroke: $color__primary;
+	stroke-width: 0px;
+	fill: $color__primary;
+}
+
+.select2-container--default {
+	.select2-selection--single {
+		border-radius: 0;
+		border: none;
+		border-bottom: 2px solid $color__border;
+		height: 35px;
+		padding: 5px 0;
+
+		&:focus {
+			border-bottom-color: $color__primary;
+		}
+
+		.select2-selection__rendered {
+			padding-left: 0;
+		}
+	}
+}
+
+.select2-container--open .select2-dropdown--below {
+	border-radius: 0;
+}
+
+.select2-search input {
+	border: none !important;
+	border-radius: 0 !important;
+	border-bottom: 2px solid #f1f2f4 !important;
+	transition: all 0.5s;
+
+	&:hover,
+	&:focus {
+		border-bottom-color: $color__primary !important;
+	}
+}
+
+.label {
+	font-size: 100%;
+	color: $color__primary;
+}
+
+.scroll-slider,
+.line-hover,
+.dark-line {
+	cursor: pointer;
+}
+
+.line-hover {
+	position: relative;
+	display: inline-block;
+
+	&:after {
+		transition: all 0.5s;
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: -5px;
+		width: 0;
+		height: 2px;
+		background-color: $color__primary;
+	}
+
+	&.active,
+	&:hover {
+		&:after {
+			left: 0;
+			width: 100%;
+			background-color: $color__primary;
+		}
+	}
+
+	&.line-white {
+		&:after {
+			background-color: $color__light;
+		}
+
+		&.active,
+		&:hover {
+			&:after {
+				background-color: $color__light;
+			}
+		}
+	}
+}
+
+.dark-line {
+	position: relative;
+	display: inline-block;
+
+	&:after {
+		transition: all 0.5s;
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: -5px;
+		width: 0;
+		height: 2px;
+		background-color: $color__light;
+	}
+
+	&.active,
+	&:hover {
+		&:after {
+			left: 0;
+			width: 100%;
+			background-color: $color__light;
+		}
+	}
+}
+
+.sober-alert-bar {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	opacity: 0;
+	transition: 0.5s;
+	transform: translate3d(0, 100%, 0);
+	z-index: 999;
+
+	&.active {
+		transform: translate3d(0, 0 , 0);
+		opacity: 1;
+	}
+
+	.woocommerce-error,
+	.woocommerce-info,
+	.woocommerce-message {
+		margin: 0 !important;
+		padding: 5px 40px 5px 70px !important;
+
+		.message-icon {
+			width: 20px;
+		}
+
+		.close {
+			top: 50%;
+		}
+	}
+}
+
+.notifyjs-sober-base {
+	@include font-size(1.3);
+	font-weight: 500;
+	position: relative;
+	padding: 15px 20px 15px 70px;
+	margin-bottom: 10px;
+	box-shadow: 0 4px 10px 0 rgba(3, 3, 3, 0.1);
+
+	.message-icon {
+		position: absolute;
+		left: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.notifyjs-sober-success {
+	color: #299c77;
+	background-color: #bff9d0;
+
+	.message-icon {
+		fill: #299c77;
+		stroke: #299c77;
+	}
+}
+
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999999;
+	background: rgba(255,255,255,0.95);
+
+	.loading-icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: block;
+
+		.dot {
+			background-color: $color__primary;
+		}
+	}
+}
+
+.no-js .preloader {
+	display: none;
+}
+
+.loading-icon {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+
+	* {
+		animation-play-state: paused;
+	}
+
+	.bubble {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		margin: 0 5px;
+
+		&:nth-child(2n) .dot {
+			animation-delay: -0.3s;
+		}
+
+		&:nth-child(3n) .dot {
+			animation-delay: 0s;
+		}
+	}
+
+	.dot {
+		display: block;
+		border-radius: 50%;
+		background-color: #fff;
+		width: 100%;
+		height: 100%;
+		transform-origin: 50% 50%;
+		animation: bubble 1.2s -0.6s infinite ease-out;
+		-webkit-animation: bubble 1.2s -0.6s infinite ease-out;
+	}
+}
+
+@keyframes bubble {
+	0%, 100% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes bubble {
+	0%, 100% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1);
+	}
+}
+
+
+@keyframes soberFadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 50px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.soberFadeInUp {
+	animation-name: soberFadeInUp;
+}
+
+@keyframes soberFadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.soberFadeIn {
+	animation-name: soberFadeIn;
+}
+
+.soberAnimation {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+@import "scrollbar";
+
+@import "tabs";
+
+@import "modal";
+
+@import "carousel";
+
+@import "shortcodes";
+

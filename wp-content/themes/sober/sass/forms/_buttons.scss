@@ -1,0 +1,92 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	transition: 0.5s;
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+	display: inline-block;
+	padding: 6px 50px;
+	border-radius: 0;
+	border: 0;
+	background-color: $color__primary;
+	cursor: pointer;
+	position: relative;
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		box-shadow: none;
+		background-color: darken(desaturate($color__primary, 3.2843), 8.2353);
+	}
+}
+
+button.close {
+	&:hover {
+		background-color: transparent;
+	}
+}
+
+.button,
+.btn {
+	@include button();
+}
+
+.button {
+	&.large {
+		line-height: 80px;
+		min-width: 320px;
+	}
+
+	&.small {
+		line-height: 50px;
+		min-width: 160px;
+	}
+
+	.button-text {
+		transition: 0.5s;
+	}
+
+	.loading-icon {
+		transition: 0.5s;
+		position: absolute;
+		height: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
+	}
+
+	&.loading {
+		cursor: wait;
+
+		.button-text {
+			opacity: 0;
+		}
+
+		.loading-icon {
+			opacity: 1;
+		}
+	}
+
+	&.button-type-outline {
+		color: $color__primary;
+		border: 2px solid $color__primary;
+		background: transparent;
+
+		&:hover {
+			color: #fff;
+			background: $color__primary;
+		}
+
+		&.button-color-white {
+			color: #fff;
+			border-color: #fff;
+
+			&:hover {
+				color: $color__primary;
+				background-color: #fff;
+			}
+		}
+	}
+}

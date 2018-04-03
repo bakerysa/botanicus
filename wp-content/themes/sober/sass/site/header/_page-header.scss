@@ -1,0 +1,104 @@
+.page-header {
+	text-align: center;
+	padding: 175px 0 175px 0;
+	margin: 0;
+	border: 0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: $color__border;
+
+	.page-title {
+		@include font-size(9);
+		color: $color__primary;
+		font-weight: 300;
+		font-family: "Sofia Pro", Poppins, sans-serif;
+		margin: 0;
+		line-height: 1;
+		padding-bottom: 35px;
+	}
+
+	.header-transparent.page &,
+	.header-transparent.woocommerce & {
+		padding: 275px 0 175px 0;
+	}
+
+	.portfolio-masonry & {
+		padding-top: 75px;
+		padding-bottom: 75px;
+	}
+
+	.header-transparent.portfolio-masonry & {
+		padding-top: 175px;
+		padding-bottom: 75px;
+	}
+
+	.blog.blog-grid & {
+		padding-top: 170px;
+		padding-bottom: 80px;
+	}
+
+	.woocommerce-checkout & {
+		padding-top: 60px;
+		padding-bottom: 55px;
+		background-image: none;
+
+		.page-title {
+			@include font-size(4);
+			margin-bottom: 20px;
+			padding-bottom: 0;
+		}
+	}
+
+	.page-header-style-minimal & {
+		padding-top: 28px;
+		padding-bottom: 27px;
+		background: $color__border;
+
+		.page-title {
+			@include font-size(2.4);
+			float: left;
+			padding: 0;
+			margin: 0;
+		}
+
+		.breadcrumb {
+			float: right;
+		}
+	}
+
+	.page-header-style-minimal.blog.blog-grid & {
+		padding-top: 28px;
+		padding-bottom: 27px;
+	}
+
+	.page-header-text-light & {
+		.page-title {
+			color: $color__light;
+		}
+
+		.breadcrumb {
+			color: $color__light;
+
+			a,
+			.fa {
+				color: $color__light;
+			}
+		}
+	}
+
+	.page-header-color & {
+		.page-title {
+			color: $color__primary;
+		}
+
+		// .breadcrumb {
+		// 	color: $color__secondary;
+
+		// 	a,
+		// 	.fa {
+		// 		color: $color__primary;
+		// 	}
+		// }
+	}
+}

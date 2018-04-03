@@ -1,0 +1,10 @@
+.soo-wishlist-share ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.soo-wishlist-share ul li {
+	display: inline-block;
+	margin-right: 30px;
+}

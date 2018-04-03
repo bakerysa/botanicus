@@ -12,3 +12,7 @@ This is a wordpress-based project. This means that all of the installation and c
 2. Edit the project variables in the `gulpfile.js` between the two comments `// START Editing Project Variables.` and `// STOP Editing Project Variables.` to match your dev environement.
 3. In theme root using terminal run the following commands: `sudo npm install --global gulp` and then `sudo npm install`
 4. To start the server simply run `gulp`.
+
+### Note
+
+No database / sql file is included for security purposes. This can be retrieved from the server.
